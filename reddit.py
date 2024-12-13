@@ -66,4 +66,14 @@ for row in second_list:
         part_two += solve(row, True)
 print(f"Result for day 7 exercise 1: {part_one}")
 print(f"Result for day 7 exercise 2: {part_two}")
-    
+
+
+#My read_data function
+def read_data(file_path: str) -> list: 
+    puzzle = []
+    with open("file_path",'r') as file:
+        for row in file:
+            result, *nums = row.strip().split(',')
+            puzzle.append((int(result), list(map(int, nums))))
+    return puzzle
+puzzle = read_data("path")
